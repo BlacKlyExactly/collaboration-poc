@@ -22,7 +22,8 @@ export default defineConfig({
   // node_modules deps are externalized by default; nothing to inline for a Nest server.
   dts: false,
   // Resolve the workspace type alias so the shared types lib is consumed during the build.
-  alias: {
-    '@nestjs-template/types': join(here, '../../packages/types/src/index.ts'),
+  deps: {
+    alwaysBundle: ['@notes-app/prisma', '@notes-app/contracts'],
+    neverBundle: ['sodium-native'],
   },
 });

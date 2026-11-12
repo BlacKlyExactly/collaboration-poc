@@ -34,7 +34,35 @@
         "targetName": "e2e"
       },
       "include": ["apps/api-e2e/**/*"]
-    }
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        }
+      }
+    },
+    {
+      "plugin": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "devTargetName": "dev",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static",
+        "typecheckTargetName": "typecheck",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    },
+    {
+      "plugin": "@nx/rolldown/plugin",
+      "options": {
+        "buildTargetName": "build"
+      }
+    },
+    "@nx/js/tsx"
   ],
   "targetDefaults": {
     "@nx/js:tsc": {
@@ -43,5 +71,23 @@
       "inputs": ["production", "^production"]
     }
   },
-  "analytics": false
+  "analytics": false,
+  "generators": {
+    "@nx/react": {
+      "application": {
+        "babel": true,
+        "style": "none",
+        "linter": "eslint",
+        "bundler": "vite"
+      },
+      "component": {
+        "style": "none"
+      },
+      "library": {
+        "style": "none",
+        "linter": "eslint",
+        "unitTestRunner": "none"
+      }
+    }
+  }
 }

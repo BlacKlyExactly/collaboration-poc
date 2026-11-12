@@ -1,14 +1,23 @@
 {
-  "name": "@nestjs-template/api",
+  "name": "@notes-app/api",
   "version": "0.0.1",
   "private": true,
   "main": "main.cjs",
   "dependencies": {
+    "@fastify/cookie": "^11.1.5",
+    "@fastify/session": "^11.1.6",
     "@nestjs/common": "^11.0.0",
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
-    "@nestjs-template/types": "0.0.1",
+    "@notes-app/prisma": "workspace:*",
+    "@notes-app/contracts": "workspace:*",
+    "@prisma/orm-postgres": "^8.0.0-rc.22",
+    "fastify-session-redis-store": "^7.1.2",
+    "redis": "^6.3.1",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.0"
+  },
+  "devDependencies": {
+    "prisma": "^8.0.0-rc.30"
   }
 }

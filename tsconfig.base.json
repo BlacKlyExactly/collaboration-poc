@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "paths": {
-      "@nestjs-template/types": ["./packages/types/src/index.ts"]
+      "@notes-app/prisma": ["./libs/prisma/src/index.ts"],
+      "@notes-app/ui": ["./libs/ui/src/index.ts"],
+      "@notes-app/contracts": ["./libs/contracts/src/index.ts"]
     },
     "strict": false,
     "noUncheckedSideEffectImports": false,

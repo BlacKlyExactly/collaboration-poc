@@ -1,0 +1,8 @@
+{
+  "name": "@notes-app/collaboration",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@notes-app/contracts": "workspace:*"
+  }
+}

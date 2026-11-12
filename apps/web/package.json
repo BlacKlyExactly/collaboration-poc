@@ -1,0 +1,9 @@
+{
+  "name": "@notes-app/web",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@notes-app/ui": "workspace:*",
+    "@notes-app/contracts": "workspace:*"
+  }
+}
